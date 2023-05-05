@@ -9,8 +9,9 @@
         const contador = document.getElementById("contadorCaracteres");
         const caracteres = input.value.length;
         const limite = input.getAttribute("maxlength");
+        const restantes = limite - caracteres;
 
-        contador.textContent = caracteres + "/" + limite + " caracteres";
+        contador.textContent = restantes + " caracteres restantes";
       }
 
       // Atualiza o contador assim que a página é carregada
