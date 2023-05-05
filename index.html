@@ -1,14 +1,20 @@
-<html>
-  <script>
-    function atualizarContador() {
-      const input = document.getElementById("meuInput");
-      const contador = document.getElementById("contadorCaracteres");
-      const caracteres = input.value.length;
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <title>Contador de caracteres acessível</title>
+    <script>
+      function atualizarContador() {
+        const input = document.getElementById("meuInput");
+        const contador = document.getElementById("contadorCaracteres");
+        const caracteres = input.value.length;
 
-      contador.textContent = caracteres + " caracteres";
-    }
-  </script>
+        contador.textContent = caracteres + "/20 caracteres";
+      }
+    </script>
+  </head>
   <body>
+    <label for="meuInput">Digite o texto:</label>
     <input type="text" id="meuInput" maxlength="20" oninput="atualizarContador()" aria-describedby="contadorCaracteres">
     <p id="contadorCaracteres" role="status" aria-live="polite">0/20 caracteres</p>
   </body>
